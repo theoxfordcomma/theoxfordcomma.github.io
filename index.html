@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
     <title>Title</title>
     <style>
-    h1 {
-      color: red;
+    #t {
+      color: hsl(10,100%,50%);
+      font-size: 80px;
+      text-align: center;
     }
     </style>
+<script>
+setInterval(func, 25)
+var x = 1
+var func = function() {
+document.getElementById("t").style.color = "hsl(" + x%360 + ",100%,50%)"
+x++
+}
+setInterval(func, 25)
+
+</script>
   </head>
 
   <body>
-
-    <h1>,</h1>
+    <h1 id="t">,</h1>
   </body>
 </html>
